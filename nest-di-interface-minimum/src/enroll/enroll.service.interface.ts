@@ -1,3 +1,3 @@
-export interface EnrollServiceInterface {
-  enroll(): string
+export abstract class EnrollServiceInterface {
+  abstract enroll(): string
 }

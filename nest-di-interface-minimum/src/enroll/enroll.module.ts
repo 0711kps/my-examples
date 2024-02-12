@@ -1,12 +1,13 @@
 import { Module } from '@nestjs/common';
 import { EnrollController } from './enroll.controller';
-import { Enroll2Service } from './enroll2.service';
+import { EnrollService } from './enroll.service';
+import { EnrollServiceInterface } from './enroll.service.interface'
 
 @Module({
   controllers: [EnrollController],
   providers: [{
-    provide: 'EnrollService',
-    useClass: Enroll2Service
+    provide: EnrollServiceInterface,
+    useClass: EnrollService
   }]
 })
 export class EnrollModule {}
